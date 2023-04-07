@@ -39,7 +39,9 @@ class Routes {
             $error_controler = new ErrorController;
             $error_controler->index();
         } else {
+            require_once get_parent_theme_file_path($model_directory);
             require_once get_parent_theme_file_path($controller_directory);
+            new $the_model;
 
             if(isset($class[1])) {
                 try {
@@ -58,8 +60,6 @@ class Routes {
                 
             }
 
-            // require_once get_parent_theme_file_path($model_directory);
-            // new $the_model;
         }    
     }
 }
