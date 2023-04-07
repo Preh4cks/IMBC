@@ -8,7 +8,6 @@ class WelcomeController extends Controller {
     public function index($fields) {
         $fields = array('fields' => $fields);
         $header_values = array(
-            'title' => 'Home',
             'styles' => array('global.css', 'welcome.css'),
         );
 
